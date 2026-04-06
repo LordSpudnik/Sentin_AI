@@ -71,7 +71,7 @@ All serialized artifacts — trained model, scaler, label encoder, and feature l
 ## Repository Structure
 
 ```
-├── Dataset/
+├── Data/
 │   ├── Processed/
 │   │   └── processed_network_dataset.csv   # Cleaned, normalized, SMOTE-balanced dataset
 │   ├── Raw/
