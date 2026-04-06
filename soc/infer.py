@@ -176,7 +176,7 @@ class SentinAIInferencer:
 
 if __name__ == "__main__":
     # Simple local test using your processed dataset
-    dataset_path = os.path.join("CNS Dataset", "Processed", "processed_network_dataset.csv")
+    dataset_path = os.path.join("Data", "Processed", "processed_network_dataset.csv")
 
     if not os.path.exists(dataset_path):
         print(f"Test dataset not found at: {dataset_path}")

@@ -16,9 +16,9 @@ st.set_page_config(
 @st.cache_resource
 def load_simulator():
     return SentinAITrafficSimulator(
-        dataset_path=os.path.join("CNS Dataset", "Processed", "processed_network_dataset.csv"),
+        dataset_path=os.path.join("Data", "Processed", "processed_network_dataset.csv"),
         model_path=os.path.join("models", "best_model.pkl"),
-        log_path=os.path.join("soc", "alerts_log.csv"),
+        log_path=os.path.join("SOC", "alerts_log.csv"),
         sleep_seconds=0.2
     )
 

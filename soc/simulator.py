@@ -6,8 +6,8 @@ from typing import Dict, Generator, List, Optional
 
 import pandas as pd
 
-from infer import SentinAIInferencer
-from rules import build_alert_record
+from SOC.infer import SentinAIInferencer
+from SOC.rules import build_alert_record
 
 
 class SentinAITrafficSimulator:
@@ -25,14 +25,14 @@ class SentinAITrafficSimulator:
     ):
         if dataset_path is None:
             dataset_path = os.path.join(
-                "CNS Dataset", "Processed", "processed_network_dataset.csv"
+                "Data", "Processed", "processed_network_dataset.csv"
             )
 
         if model_path is None:
             model_path = os.path.join("models", "best_model.pkl")
 
         if log_path is None:
-            log_path = os.path.join("soc", "alerts_log.csv")
+            log_path = os.path.join("SOC", "alerts_log.csv")
 
         self.dataset_path = dataset_path
         self.model_path = model_path
@@ -215,9 +215,9 @@ class SentinAITrafficSimulator:
 
 if __name__ == "__main__":
     simulator = SentinAITrafficSimulator(
-        dataset_path=os.path.join("CNS Dataset", "Processed", "processed_network_dataset.csv"),
+        dataset_path=os.path.join("Data", "Processed", "processed_network_dataset.csv"),
         model_path=os.path.join("models", "best_model.pkl"),
-        log_path=os.path.join("soc", "alerts_log.csv"),
+        log_path=os.path.join("SOC", "alerts_log.csv"),
         sleep_seconds=0.2
     )
 
